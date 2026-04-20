@@ -87,7 +87,7 @@ export const SlidesIcon = (props: IconProps) => (
 
 /* Parent brand mark */
 export const GoPaddiMark = (props: IconProps) => (
-  <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" {...rest(props)}>
+  <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
     <rect width="64" height="64" rx="16" fill="url(#gp-grad)" />
     <path
       d="M20 32c0-6.6 5.4-12 12-12s12 5.4 12 12-5.4 12-12 12h-4v-6h4a6 6 0 1 0-6-6v18h-6V32z"
@@ -101,7 +101,3 @@ export const GoPaddiMark = (props: IconProps) => (
     </defs>
   </svg>
 );
-
-function rest(p: IconProps) {
-  return p;
-}
