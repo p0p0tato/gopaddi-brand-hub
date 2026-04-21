@@ -52,8 +52,8 @@ export const APPS: AppMeta[] = [
     tagline: "Finance for modern teams.",
     description:
       "Books turns bookkeeping into a calm, structured experience — built for operators, not accountants.",
-    primaryHex: "#0D9E6E",
-    secondaryHex: "#064E36",
+    primaryHex: "#17A57D",
+    secondaryHex: "#A6E0D0",
     neutralHex: "#0B1F19",
     token: "books",
     Icon: BooksIcon,
