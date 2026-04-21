@@ -105,18 +105,14 @@ export const SlidesIcon = (props: IconProps) => (
 );
 
 /* Parent brand mark */
-export const GoPaddiMark = (props: IconProps) => (
-  <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
-    <rect width="64" height="64" rx="16" fill="url(#gp-grad)" />
-    <path
-      d="M20 32c0-6.6 5.4-12 12-12s12 5.4 12 12-5.4 12-12 12h-4v-6h4a6 6 0 1 0-6-6v18h-6V32z"
-      fill="white"
-    />
-    <defs>
-      <linearGradient id="gp-grad" x1="0" y1="0" x2="64" y2="64">
-        <stop offset="0%" stopColor="hsl(var(--pod))" />
-        <stop offset="100%" stopColor="hsl(var(--slides))" />
-      </linearGradient>
-    </defs>
-  </svg>
+import gopaddiLogo from "@/assets/gopaddi-logo.svg";
+
+export const GoPaddiMark = ({ className, style, ...rest }: IconProps) => (
+  <img
+    src={gopaddiLogo}
+    alt="Gopaddi"
+    className={className}
+    style={style}
+    {...(rest as object)}
+  />
 );
