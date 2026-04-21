@@ -4,7 +4,7 @@ import { hexToHslLabel, rgbLabel } from "@/lib/utils";
 import { cn } from "@/lib/utils";
 
 interface SwatchProps {
-  name: string;
+  name?: string;
   hex: string;
   role?: string;
   textOnLight?: boolean;
@@ -31,7 +31,7 @@ export function ColorSwatch({ name, hex, role }: SwatchProps) {
         )}
         style={{ backgroundColor: hex }}
       >
-        <div className="text-xs font-medium">{name}</div>
+        {name && <div className="text-xs font-medium">{name}</div>}
         {role && <div className="text-[10px] uppercase tracking-wider opacity-80">{role}</div>}
       </div>
       <dl className="divide-y divide-border text-[12px]">

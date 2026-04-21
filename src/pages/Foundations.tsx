@@ -1,16 +1,24 @@
 import { useEffect } from "react";
 import { PageHeader, PageBody, Section, Placeholder } from "@/components/content/Page";
 import { ColorSwatch } from "@/components/content/ColorSwatch";
-import { GoPaddiMark } from "@/components/icons/AppIcons";
-import { Box, Type, Grid3x3, Image as ImageIcon } from "lucide-react";
+import { GoPaddiMark, PodIcon, BooksIcon, WorkforceIcon, SlidesIcon } from "@/components/icons/AppIcons";
+import {
+  Cube,
+  TextAa,
+  GridFour,
+  Image as PhImage,
+  MagnifyingGlass,
+  Heart,
+  Gear,
+} from "@phosphor-icons/react";
 
 const NEUTRALS = [
-  { name: "Neutral 50", hex: "#F8FAFC" },
-  { name: "Neutral 100", hex: "#F1F5F9" },
-  { name: "Neutral 300", hex: "#CBD5E1" },
-  { name: "Neutral 500", hex: "#64748B" },
-  { name: "Neutral 700", hex: "#334155" },
-  { name: "Neutral 900", hex: "#0F172A" },
+  { hex: "#FFFFFF" },
+  { hex: "#F5F7FA" },
+  { hex: "#CACFD8" },
+  { hex: "#99A0AE" },
+  { hex: "#525866" },
+  { hex: "#181B25" },
 ];
 
 const TYPE_SCALE = [
@@ -37,7 +45,7 @@ const Foundations = () => {
         description="Every app in the Gopaddi suite is built on the same foundation: Satoshi typography, an 8-point spacing grid, a neutral palette, and a strict iconography system."
       />
       <PageBody>
-        <Section title="Logo usage" description="The Gopaddi parent mark anchors the suite.">
+        <Section title="Logo usage" description="The Gopaddi parent mark anchors the suite — sub-app marks follow the same clear-space rule.">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             <div className="rounded-xl border border-border bg-card p-8 flex items-center justify-center h-44">
               <GoPaddiMark className="h-16 w-16" />
@@ -47,13 +55,18 @@ const Foundations = () => {
             </div>
             <div className="rounded-xl border border-border bg-card p-6 text-sm text-muted-foreground">
               <div className="flex items-center gap-2 mb-2 text-foreground">
-                <ImageIcon className="h-4 w-4" /> <span className="font-medium">Clear space</span>
+                <PhImage className="h-4 w-4" weight="regular" /> <span className="font-medium">Clear space</span>
               </div>
               <p>
-                Maintain a minimum clear space of half the mark's height around the logo. Never compose the mark
-                inside another container or apply outer shadows.
+                Maintain a minimum clear space equal to half the mark's height around every Gopaddi or sub-app logo.
+                Never compose a mark inside another container or apply outer shadows.
               </p>
-              <div className="mt-3"><Placeholder>PLACEHOLDER FILE</Placeholder> Final wordmark in production.</div>
+              <div className="mt-4 grid grid-cols-4 gap-3 items-center">
+                <PodIcon className="h-10 w-10" />
+                <BooksIcon className="h-10 w-10" />
+                <WorkforceIcon className="h-10 w-10" />
+                <SlidesIcon className="h-10 w-10" />
+              </div>
             </div>
           </div>
         </Section>
@@ -82,14 +95,14 @@ const Foundations = () => {
             ))}
           </div>
           <div className="mt-4 flex items-center gap-2 text-xs text-muted-foreground">
-            <Type className="h-3.5 w-3.5" /> Always set Satoshi with OpenType ss02 and ss03 enabled.
+            <TextAa className="h-3.5 w-3.5" weight="regular" /> Always set Satoshi with OpenType ss02 and ss03 enabled.
           </div>
         </Section>
 
         <Section title="Color system" description="A grounded neutral ramp keeps the focus on each app's brand color.">
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
             {NEUTRALS.map((n) => (
-              <ColorSwatch key={n.hex} name={n.name} hex={n.hex} />
+              <ColorSwatch key={n.hex} hex={n.hex} />
             ))}
           </div>
         </Section>
@@ -104,11 +117,11 @@ const Foundations = () => {
             ))}
           </div>
           <div className="mt-3 flex items-center gap-2 text-xs text-muted-foreground">
-            <Grid3x3 className="h-3.5 w-3.5" /> Component padding always lands on a multiple of 4.
+            <GridFour className="h-3.5 w-3.5" weight="regular" /> Component padding always lands on a multiple of 4.
           </div>
         </Section>
 
-        <Section title="Iconography" description="App icons live in a 14px-radius squircle on a 64px grid. Utility icons (Lucide) sit on a 24px grid with 1.5px strokes.">
+        <Section title="Iconography" description="App icons live in a 14px-radius squircle on a 64px grid. Utility icons use Phosphor Icons (regular, fill, and duotone variants depending on context) on a 24px grid.">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div className="rounded-xl border border-border bg-card p-6">
               <div className="text-sm font-medium mb-1">App icons</div>
@@ -118,13 +131,21 @@ const Foundations = () => {
               </div>
             </div>
             <div className="rounded-xl border border-border bg-card p-6">
-              <div className="text-sm font-medium mb-1">UI icons</div>
-              <p className="text-sm text-muted-foreground mb-4">Outline, currentColor, no container.</p>
-              <div className="flex items-center justify-center gap-6 h-28 rounded-lg bg-muted/40 text-foreground">
-                <Box className="h-6 w-6" />
-                <Type className="h-6 w-6" />
-                <Grid3x3 className="h-6 w-6" />
-                <ImageIcon className="h-6 w-6" />
+              <div className="text-sm font-medium mb-1">UI icons — Phosphor</div>
+              <p className="text-sm text-muted-foreground mb-4">Regular for default UI, Fill for active/selected, Duotone for emphasis.</p>
+              <div className="grid grid-cols-3 gap-4 h-28 rounded-lg bg-muted/40 text-foreground place-items-center px-4">
+                <div className="flex flex-col items-center gap-1">
+                  <MagnifyingGlass className="h-6 w-6" weight="regular" />
+                  <span className="text-[10px] font-mono text-muted-foreground">regular</span>
+                </div>
+                <div className="flex flex-col items-center gap-1">
+                  <Heart className="h-6 w-6 text-app" weight="fill" />
+                  <span className="text-[10px] font-mono text-muted-foreground">fill</span>
+                </div>
+                <div className="flex flex-col items-center gap-1">
+                  <Gear className="h-6 w-6 text-app" weight="duotone" />
+                  <span className="text-[10px] font-mono text-muted-foreground">duotone</span>
+                </div>
               </div>
             </div>
           </div>
