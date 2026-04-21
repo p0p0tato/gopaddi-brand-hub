@@ -26,7 +26,7 @@ const Downloads = () => {
             />
             <DownloadCard
               icon={<FileType className="h-4 w-4" />}
-              title="Inter font family"
+              title="Satoshi font family"
               meta="Variable .woff2"
               note="PLACEHOLDER FILE"
             />

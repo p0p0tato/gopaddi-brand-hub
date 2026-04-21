@@ -124,7 +124,12 @@ export function AppPage({ app }: { app: AppMeta }) {
               {
                 type: "dont",
                 label: "Stretch or distort the icon to fit a layout.",
-                visual: <Icon className="rounded-2xl" style={{ width: 140, height: 80 }} />,
+                visual: (
+                  <Icon
+                    className="h-24 rounded-2xl"
+                    style={{ width: 96, transform: "scaleX(1.6)", transformOrigin: "center" }}
+                  />
+                ),
               },
               {
                 type: "dont",
