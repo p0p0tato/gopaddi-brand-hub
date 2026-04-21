@@ -37,8 +37,8 @@ export const APPS: AppMeta[] = [
     tagline: "Team messaging, threaded.",
     description:
       "Pod brings synchronous and async conversations into one focused workspace for product teams.",
-    primaryHex: "#4F6EF7",
-    secondaryHex: "#1E2A78",
+    primaryHex: "#4D61FE",
+    secondaryHex: "#AEB7FF",
     neutralHex: "#0F172A",
     token: "pod",
     Icon: PodIcon,
