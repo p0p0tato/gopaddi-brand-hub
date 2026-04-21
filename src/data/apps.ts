@@ -114,11 +114,10 @@ export const APPS: AppMeta[] = [
     tagline: "Presentations with taste.",
     description:
       "Slides helps teams craft beautiful, opinionated presentations without fighting the editor.",
-    primaryHex: "#EC4899",
-    secondaryHex: "#831843",
-    neutralHex: "#1A0F14",
+    primaryHex: "#FF920A",
+    secondaryHex: "#FFCD8F",
+    neutralHex: "#1A1006",
     token: "slides",
-    placeholderColor: true,
     Icon: SlidesIcon,
     voiceTone:
       "[PLACEHOLDER] Bold, expressive, decisive. Slides is the creative director in the room.",
