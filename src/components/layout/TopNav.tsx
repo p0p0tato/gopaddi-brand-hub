@@ -29,7 +29,7 @@ export function TopNav({ onMenuToggle }: TopNavProps) {
         <Link to="/" className="flex items-center gap-2.5 group">
           <GoPaddiMark className="h-7 w-7 transition-transform group-hover:scale-105" />
           <div className="flex items-baseline gap-2">
-            <span className="text-[15px] font-semibold tracking-tight">GoPaddi</span>
+            <span className="text-[15px] font-semibold tracking-tight">Gopaddi</span>
             <span className="hidden sm:inline text-xs text-muted-foreground">Brand Guidelines</span>
           </div>
           <span className="ml-1 hidden md:inline rounded-full border border-border bg-muted px-1.5 py-0.5 text-[10px] font-medium text-muted-foreground">

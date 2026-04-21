@@ -5,7 +5,7 @@ import { APPS } from "@/data/apps";
 
 const Downloads = () => {
   useEffect(() => {
-    document.title = "Downloads — GoPaddi";
+    document.title = "Downloads — Gopaddi";
   }, []);
 
   return (
@@ -16,7 +16,7 @@ const Downloads = () => {
         description="Logos, icons, and font files. All file links below are placeholders pending the official asset drop."
       />
       <PageBody>
-        <Section title="Brand kit" description="The complete GoPaddi parent brand kit.">
+        <Section title="Brand kit" description="The complete Gopaddi parent brand kit.">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             <DownloadCard
               icon={<Package className="h-4 w-4" />}

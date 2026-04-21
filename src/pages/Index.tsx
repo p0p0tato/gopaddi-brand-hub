@@ -6,15 +6,15 @@ import { APPS } from "@/data/apps";
 
 const Index = () => {
   useEffect(() => {
-    document.title = "GoPaddi Brand Guidelines — Suite Overview";
+    document.title = "Gopaddi Brand Guidelines — Suite Overview";
   }, []);
 
   return (
     <>
       <PageHeader
-        eyebrow="GoPaddi Suite"
+        eyebrow="Gopaddi Suite"
         title="One brand, six apps, every detail."
-        description="The single source of truth for how the GoPaddi suite looks, feels, and is used — for designers, developers, and marketers shipping in our name."
+        description="The single source of truth for how the Gopaddi suite looks, feels, and is used — for designers, developers, and marketers shipping in our name."
       >
         <div className="flex flex-wrap gap-3">
           <Link
@@ -34,14 +34,14 @@ const Index = () => {
       </PageHeader>
 
       <PageBody>
-        <Section title="Brand mission" description="What GoPaddi believes and ships toward.">
+        <Section title="Brand mission" description="What Gopaddi believes and ships toward.">
           <div className="rounded-xl border border-dashed border-border bg-muted/30 p-6">
             <div className="flex items-center gap-2 mb-2 text-app">
               <Sparkles className="h-4 w-4" />
               <span className="text-xs font-medium uppercase tracking-wider">Mission statement</span>
             </div>
             <p className="text-base leading-relaxed text-foreground">
-              [PLACEHOLDER] GoPaddi exists to give every team a calm, modern operating system — six focused apps that work better together than apart. Replace this paragraph with the official mission statement.
+              [PLACEHOLDER] Gopaddi exists to give every team a calm, modern operating system — six focused apps that work better together than apart. Replace this paragraph with the official mission statement.
             </p>
             <div className="mt-3"><Placeholder>PLACEHOLDER COPY</Placeholder></div>
           </div>

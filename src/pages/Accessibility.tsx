@@ -27,7 +27,7 @@ function contrast(hex1: string, hex2: string) {
 
 const Accessibility = () => {
   useEffect(() => {
-    document.title = "Accessibility — GoPaddi";
+    document.title = "Accessibility — Gopaddi";
   }, []);
 
   return (

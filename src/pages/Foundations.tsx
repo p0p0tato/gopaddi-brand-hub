@@ -14,7 +14,7 @@ const NEUTRALS = [
 ];
 
 const TYPE_SCALE = [
-  { name: "Display", size: "48 / 56", weight: 600, sample: "GoPaddi for teams" },
+  { name: "Display", size: "48 / 56", weight: 600, sample: "Gopaddi for teams" },
   { name: "Heading 1", size: "36 / 44", weight: 600, sample: "Build with confidence" },
   { name: "Heading 2", size: "28 / 36", weight: 600, sample: "One language, six tools" },
   { name: "Heading 3", size: "20 / 28", weight: 600, sample: "Components & patterns" },
@@ -26,7 +26,7 @@ const SPACING = [2, 4, 8, 12, 16, 24, 32, 48, 64, 96];
 
 const Foundations = () => {
   useEffect(() => {
-    document.title = "Brand Foundations — GoPaddi";
+    document.title = "Brand Foundations — Gopaddi";
   }, []);
 
   return (
@@ -34,10 +34,10 @@ const Foundations = () => {
       <PageHeader
         eyebrow="Brand Foundations"
         title="The shared language of the suite."
-        description="Every app in the GoPaddi suite is built on the same foundation: Inter typography, an 8-point spacing grid, a neutral palette, and a strict iconography system."
+        description="Every app in the Gopaddi suite is built on the same foundation: Inter typography, an 8-point spacing grid, a neutral palette, and a strict iconography system."
       />
       <PageBody>
-        <Section title="Logo usage" description="The GoPaddi parent mark anchors the suite.">
+        <Section title="Logo usage" description="The Gopaddi parent mark anchors the suite.">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             <div className="rounded-xl border border-border bg-card p-8 flex items-center justify-center h-44">
               <GoPaddiMark className="h-16 w-16" />

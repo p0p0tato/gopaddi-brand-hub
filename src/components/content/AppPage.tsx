@@ -8,7 +8,7 @@ import { Smartphone, Monitor, Tablet, Laptop } from "lucide-react";
 
 export function AppPage({ app }: { app: AppMeta }) {
   useEffect(() => {
-    document.title = `${app.name} — GoPaddi Brand Guidelines`;
+    document.title = `${app.name} — Gopaddi Brand Guidelines`;
   }, [app.name]);
 
   const { Icon } = app;
@@ -152,7 +152,7 @@ export function AppPage({ app }: { app: AppMeta }) {
                 <span className="text-3xl font-semibold tracking-tight" style={{ color: app.primaryHex }}>
                   {app.name}
                 </span>
-                <span className="text-sm text-muted-foreground">by GoPaddi</span>
+                <span className="text-sm text-muted-foreground">by Gopaddi</span>
               </div>
             </div>
             <div className="mt-8 flex flex-wrap items-center gap-8 text-muted-foreground">

@@ -90,7 +90,7 @@ export function Sidebar({ open, onClose }: SidebarProps) {
             <p className="text-[11px] text-muted-foreground leading-relaxed">
               Last updated <span className="text-foreground/80">Apr 20, 2026</span>
               <br />
-              Built and maintained by the GoPaddi Brand team.
+              Built and maintained by the Gopaddi Brand team.
             </p>
           </div>
         </nav>

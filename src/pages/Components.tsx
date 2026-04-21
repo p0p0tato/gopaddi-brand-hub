@@ -9,7 +9,7 @@ import { APPS } from "@/data/apps";
 
 const Components = () => {
   useEffect(() => {
-    document.title = "UI Components — GoPaddi";
+    document.title = "UI Components — Gopaddi";
   }, []);
 
   return (
