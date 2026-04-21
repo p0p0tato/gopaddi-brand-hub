@@ -67,11 +67,10 @@ export const APPS: AppMeta[] = [
     tagline: "People operations, simplified.",
     description:
       "Workforce centralizes hiring, onboarding, and HR workflows in a single source of truth.",
-    primaryHex: "#64748B",
-    secondaryHex: "#334155",
+    primaryHex: "#51BCF5",
+    secondaryHex: "#B7E3FB",
     neutralHex: "#0F172A",
     token: "workforce",
-    placeholderColor: true,
     Icon: WorkforceIcon,
     voiceTone:
       "[PLACEHOLDER] Human, structured, empathetic. Workforce sounds like the HR partner everyone wishes they had.",
