@@ -1,16 +1,24 @@
 import { useEffect } from "react";
 import { PageHeader, PageBody, Section, Placeholder } from "@/components/content/Page";
 import { ColorSwatch } from "@/components/content/ColorSwatch";
-import { GoPaddiMark } from "@/components/icons/AppIcons";
-import { Box, Type, Grid3x3, Image as ImageIcon } from "lucide-react";
+import { GoPaddiMark, PodIcon, BooksIcon, WorkforceIcon, SlidesIcon } from "@/components/icons/AppIcons";
+import {
+  Cube,
+  TextAa,
+  GridFour,
+  Image as PhImage,
+  MagnifyingGlass,
+  Heart,
+  Gear,
+} from "@phosphor-icons/react";
 
 const NEUTRALS = [
-  { name: "Neutral 50", hex: "#F8FAFC" },
-  { name: "Neutral 100", hex: "#F1F5F9" },
-  { name: "Neutral 300", hex: "#CBD5E1" },
-  { name: "Neutral 500", hex: "#64748B" },
-  { name: "Neutral 700", hex: "#334155" },
-  { name: "Neutral 900", hex: "#0F172A" },
+  { hex: "#FFFFFF" },
+  { hex: "#F5F7FA" },
+  { hex: "#CACFD8" },
+  { hex: "#99A0AE" },
+  { hex: "#525866" },
+  { hex: "#181B25" },
 ];
 
 const TYPE_SCALE = [
