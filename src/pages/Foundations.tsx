@@ -18,7 +18,7 @@ const TYPE_SCALE = [
   { name: "Heading 1", size: "36 / 44", weight: 600, sample: "Build with confidence" },
   { name: "Heading 2", size: "28 / 36", weight: 600, sample: "One language, six tools" },
   { name: "Heading 3", size: "20 / 28", weight: 600, sample: "Components & patterns" },
-  { name: "Body", size: "16 / 24", weight: 400, sample: "Inter is the suite's voice on screen — neutral, legible, and quietly confident at any scale." },
+  { name: "Body", size: "16 / 24", weight: 400, sample: "Satoshi is the suite's voice on screen — neutral, legible, and quietly confident at any scale." },
   { name: "Small", size: "13 / 20", weight: 400, sample: "Use small text sparingly for metadata and helper labels." },
 ];
 
@@ -34,7 +34,7 @@ const Foundations = () => {
       <PageHeader
         eyebrow="Brand Foundations"
         title="The shared language of the suite."
-        description="Every app in the Gopaddi suite is built on the same foundation: Inter typography, an 8-point spacing grid, a neutral palette, and a strict iconography system."
+        description="Every app in the Gopaddi suite is built on the same foundation: Satoshi typography, an 8-point spacing grid, a neutral palette, and a strict iconography system."
       />
       <PageBody>
         <Section title="Logo usage" description="The Gopaddi parent mark anchors the suite.">
@@ -58,7 +58,7 @@ const Foundations = () => {
           </div>
         </Section>
 
-        <Section title="Typography" description="Inter is the only typeface used across the suite. Pair weights 400, 500, 600, and 700.">
+        <Section title="Typography" description="Satoshi is the only typeface used across the suite. Pair weights 400, 500, 600, and 700.">
           <div className="rounded-xl border border-border bg-card divide-y divide-border">
             {TYPE_SCALE.map((t) => (
               <div key={t.name} className="grid grid-cols-12 gap-4 px-5 py-5 items-baseline">
@@ -82,7 +82,7 @@ const Foundations = () => {
             ))}
           </div>
           <div className="mt-4 flex items-center gap-2 text-xs text-muted-foreground">
-            <Type className="h-3.5 w-3.5" /> Always set Inter with OpenType cv02, cv03, cv04, cv11 enabled.
+            <Type className="h-3.5 w-3.5" /> Always set Satoshi with OpenType ss02 and ss03 enabled.
           </div>
         </Section>
 
