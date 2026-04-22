@@ -41,9 +41,8 @@ const Index = () => {
               <span className="text-xs font-medium uppercase tracking-wider">Mission statement</span>
             </div>
             <p className="text-base leading-relaxed text-foreground">
-              [PLACEHOLDER] Gopaddi exists to give every team a calm, modern operating system — six focused apps that work better together than apart. Replace this paragraph with the official mission statement.
-            </p>
-            <div className="mt-3"><Placeholder>PLACEHOLDER COPY</Placeholder></div>
+              [PLACEHOLDER] Gopaddi exists to give every team a calm, modern operating system — six focused apps that work better together than apart.
+            <div className="mt-3"><Placeholder>PLACEHOLDER COPY - CAN BE REPLPACED</Placeholder></div>
           </div>
         </Section>
 
