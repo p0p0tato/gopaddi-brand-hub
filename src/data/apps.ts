@@ -19,6 +19,12 @@ import slidesLight from "@/assets/slides/slides-light.svg";
 import slidesGlass from "@/assets/slides/slides-glass.svg";
 import slidesGrayscaleBlack from "@/assets/slides/slides-grayscale-black.svg";
 import slidesGrayscaleWhite from "@/assets/slides/slides-grayscale-white.svg";
+import podFlat from "@/assets/pod/pod-flat.svg";
+import podIsolated from "@/assets/pod/pod-isolated.svg";
+import podLight from "@/assets/pod/pod-light.svg";
+import podGlass from "@/assets/pod/pod-glass.svg";
+import podGrayscaleBlack from "@/assets/pod/pod-grayscale-black.svg";
+import podGrayscaleWhite from "@/assets/pod/pod-grayscale-white.svg";
 import booksFlat from "@/assets/books/books-flat.svg";
 import booksIsolated from "@/assets/books/books-isolated.svg";
 import booksLight from "@/assets/books/books-light.svg";
@@ -75,6 +81,48 @@ export const APPS: AppMeta[] = [
     voiceTone:
       "[PLACEHOLDER] Friendly, energetic, never noisy. Pod's voice is the helpful colleague who keeps conversations on track.",
     href: "/apps/pod",
+    variants: [
+      {
+        name: "Plain",
+        description: "The default flat logo on its native brand surface.",
+        src: podFlat,
+        background: "hsl(0 0% 100%)",
+        textDark: true,
+      },
+      {
+        name: "Isolated",
+        description: "Standalone speech mark without the circular container — for tight spaces.",
+        src: podIsolated,
+        background: "hsl(0 0% 100%)",
+        textDark: true,
+      },
+      {
+        name: "Light color",
+        description: "Soft tint variant for marketing surfaces and pastel backgrounds.",
+        src: podLight,
+        background: "hsl(0 0% 100%)",
+        textDark: true,
+      },
+      {
+        name: "Glass",
+        description: "Translucent treatment for layered hero compositions and dark imagery.",
+        src: podGlass,
+        background: "linear-gradient(135deg, #4D61FE 0%, #1A2580 100%)",
+      },
+      {
+        name: "Grayscale — black",
+        description: "Single-color black variant for print, embossing, or monochrome contexts.",
+        src: podGrayscaleBlack,
+        background: "hsl(0 0% 100%)",
+        textDark: true,
+      },
+      {
+        name: "Grayscale — white",
+        description: "Reversed monochrome for use on dark photography and brand color blocks.",
+        src: podGrayscaleWhite,
+        background: "hsl(222 24% 7%)",
+      },
+    ],
   },
   {
     key: "books",
