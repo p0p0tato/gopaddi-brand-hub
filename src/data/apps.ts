@@ -116,11 +116,10 @@ export const APPS: AppMeta[] = [
     tagline: "Docs that think with you.",
     description:
       "Pages is a flexible documents app that scales from a quick note to a full knowledge base.",
-    primaryHex: "#A855F7",
-    secondaryHex: "#581C87",
-    neutralHex: "#1A0F2A",
+    primaryHex: "#2881F4",
+    secondaryHex: "#C3DCFC",
+    neutralHex: "#0B2A5C",
     token: "pages",
-    placeholderColor: true,
     Icon: PagesIcon,
     voiceTone:
       "[PLACEHOLDER] Considered, articulate, generous. Pages writes the way you wish you wrote on your best day.",
