@@ -42,7 +42,7 @@ const Index = () => {
             </div>
             <p className="text-base leading-relaxed text-foreground">
               [PLACEHOLDER] Gopaddi exists to give every team a calm, modern operating system — six focused apps that work better together than apart.
-            <div className="mt-3"><Placeholder>PLACEHOLDER COPY - CAN BE REPLPACED</Placeholder></div>
+            <div className="mt-3"><Placeholder>PLACEHOLDER COPY - CAN BE REPLPACED</Placeholder></div> </p>
           </div>
         </Section>
 
