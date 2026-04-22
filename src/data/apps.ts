@@ -13,6 +13,12 @@ import pagesGrayscaleWhite from "@/assets/pages/pages-grayscale-white.svg";
 import pagesIsolated from "@/assets/pages/pages-isolated.svg";
 import pagesGlass from "@/assets/pages/pages-glass.svg";
 import pagesLight from "@/assets/pages/pages-light.svg";
+import slidesFlat from "@/assets/slides/slides-flat.svg";
+import slidesIsolated from "@/assets/slides/slides-isolated.svg";
+import slidesLight from "@/assets/slides/slides-light.svg";
+import slidesGlass from "@/assets/slides/slides-glass.svg";
+import slidesGrayscaleBlack from "@/assets/slides/slides-grayscale-black.svg";
+import slidesGrayscaleWhite from "@/assets/slides/slides-grayscale-white.svg";
 
 export type AppKey = "pod" | "books" | "workforce" | "sheets" | "pages" | "slides";
 
@@ -181,6 +187,48 @@ export const APPS: AppMeta[] = [
     voiceTone:
       "[PLACEHOLDER] Bold, expressive, decisive. Slides is the creative director in the room.",
     href: "/apps/slides",
+    variants: [
+      {
+        name: "Plain",
+        description: "The default flat logo on its native brand surface.",
+        src: slidesFlat,
+        background: "hsl(0 0% 100%)",
+        textDark: true,
+      },
+      {
+        name: "Isolated",
+        description: "Standalone slide mark without the circular container — for tight spaces.",
+        src: slidesIsolated,
+        background: "hsl(0 0% 100%)",
+        textDark: true,
+      },
+      {
+        name: "Light color",
+        description: "Soft tint variant for marketing surfaces and pastel backgrounds.",
+        src: slidesLight,
+        background: "hsl(0 0% 100%)",
+        textDark: true,
+      },
+      {
+        name: "Glass",
+        description: "Translucent treatment for layered hero compositions and dark imagery.",
+        src: slidesGlass,
+        background: "linear-gradient(135deg, #FF920A 0%, #8A4A00 100%)",
+      },
+      {
+        name: "Grayscale — black",
+        description: "Single-color black variant for print, embossing, or monochrome contexts.",
+        src: slidesGrayscaleBlack,
+        background: "hsl(0 0% 100%)",
+        textDark: true,
+      },
+      {
+        name: "Grayscale — white",
+        description: "Reversed monochrome for use on dark photography and brand color blocks.",
+        src: slidesGrayscaleWhite,
+        background: "hsl(222 24% 7%)",
+      },
+    ],
   },
 ];
 
