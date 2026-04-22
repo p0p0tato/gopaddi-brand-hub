@@ -13,6 +13,7 @@ import AppRoute from "./pages/AppRoute.tsx";
 import Components from "./pages/Components.tsx";
 import Accessibility from "./pages/Accessibility.tsx";
 import Downloads from "./pages/Downloads.tsx";
+import Disclaimer from "./pages/Disclaimer.tsx";
 
 const queryClient = new QueryClient();
 
@@ -32,6 +33,7 @@ const App = () => (
                 <Route path="/components" element={<Components />} />
                 <Route path="/accessibility" element={<Accessibility />} />
                 <Route path="/downloads" element={<Downloads />} />
+                <Route path="/disclaimer" element={<Disclaimer />} />
                 <Route path="*" element={<NotFound />} />
               </Routes>
             </Layout>
