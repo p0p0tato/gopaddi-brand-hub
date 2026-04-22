@@ -25,8 +25,8 @@ export default function Disclaimer() {
 
       <PageBody>
         {/* Notice */}
-        <div className="rounded-xl border border-amber-500/30 bg-amber-500/5 p-5 flex gap-4">
-          <div className="shrink-0 mt-0.5 rounded-lg bg-amber-500/15 p-2 text-amber-600 dark:text-amber-400">
+        <div className="rounded-xl border border-destructive/30 bg-destructive/5 p-5 flex gap-4">
+          <div className="shrink-0 mt-0.5 rounded-lg bg-destructive/15 p-2 text-destructive">
             <Warning size={20} weight="fill" />
           </div>
           <div className="space-y-1">
