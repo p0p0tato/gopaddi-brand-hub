@@ -19,6 +19,12 @@ import slidesLight from "@/assets/slides/slides-light.svg";
 import slidesGlass from "@/assets/slides/slides-glass.svg";
 import slidesGrayscaleBlack from "@/assets/slides/slides-grayscale-black.svg";
 import slidesGrayscaleWhite from "@/assets/slides/slides-grayscale-white.svg";
+import workforceFlat from "@/assets/workforce/workforce-flat.svg";
+import workforceIsolated from "@/assets/workforce/workforce-isolated.svg";
+import workforceLight from "@/assets/workforce/workforce-light.svg";
+import workforceGlass from "@/assets/workforce/workforce-glass.svg";
+import workforceGrayscaleBlack from "@/assets/workforce/workforce-grayscale-black.svg";
+import workforceGrayscaleWhite from "@/assets/workforce/workforce-grayscale-white.svg";
 import podFlat from "@/assets/pod/pod-flat.svg";
 import podIsolated from "@/assets/pod/pod-isolated.svg";
 import podLight from "@/assets/pod/pod-light.svg";
@@ -195,6 +201,48 @@ export const APPS: AppMeta[] = [
     voiceTone:
       "[PLACEHOLDER] Human, structured, empathetic. Workforce sounds like the HR partner everyone wishes they had.",
     href: "/apps/workforce",
+    variants: [
+      {
+        name: "Plain",
+        description: "The default flat logo on its native brand surface.",
+        src: workforceFlat,
+        background: "hsl(0 0% 100%)",
+        textDark: true,
+      },
+      {
+        name: "Isolated",
+        description: "Standalone people mark without the circular container — for tight spaces.",
+        src: workforceIsolated,
+        background: "hsl(0 0% 100%)",
+        textDark: true,
+      },
+      {
+        name: "Light color",
+        description: "Soft tint variant for marketing surfaces and pastel backgrounds.",
+        src: workforceLight,
+        background: "hsl(0 0% 100%)",
+        textDark: true,
+      },
+      {
+        name: "Glass",
+        description: "Translucent treatment for layered hero compositions and dark imagery.",
+        src: workforceGlass,
+        background: "linear-gradient(135deg, #51BCF5 0%, #0A6DA3 100%)",
+      },
+      {
+        name: "Grayscale — black",
+        description: "Single-color black variant for print, embossing, or monochrome contexts.",
+        src: workforceGrayscaleBlack,
+        background: "hsl(0 0% 100%)",
+        textDark: true,
+      },
+      {
+        name: "Grayscale — white",
+        description: "Reversed monochrome for use on dark photography and brand color blocks.",
+        src: workforceGrayscaleWhite,
+        background: "hsl(222 24% 7%)",
+      },
+    ],
   },
   {
     key: "sheets",
