@@ -7,6 +7,12 @@ import {
   PagesIcon,
   SlidesIcon,
 } from "@/components/icons/AppIcons";
+import pagesFlat from "@/assets/pages/pages-flat.svg";
+import pagesGrayscaleBlack from "@/assets/pages/pages-grayscale-black.svg";
+import pagesGrayscaleWhite from "@/assets/pages/pages-grayscale-white.svg";
+import pagesIsolated from "@/assets/pages/pages-isolated.svg";
+import pagesGlass from "@/assets/pages/pages-glass.svg";
+import pagesLight from "@/assets/pages/pages-light.svg";
 
 export type AppKey = "pod" | "books" | "workforce" | "sheets" | "pages" | "slides";
 
