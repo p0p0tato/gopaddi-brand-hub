@@ -7,6 +7,12 @@ import {
   PagesIcon,
   SlidesIcon,
 } from "@/components/icons/AppIcons";
+import pagesFlat from "@/assets/pages/pages-flat.svg";
+import pagesGrayscaleBlack from "@/assets/pages/pages-grayscale-black.svg";
+import pagesGrayscaleWhite from "@/assets/pages/pages-grayscale-white.svg";
+import pagesIsolated from "@/assets/pages/pages-isolated.svg";
+import pagesGlass from "@/assets/pages/pages-glass.svg";
+import pagesLight from "@/assets/pages/pages-light.svg";
 
 export type AppKey = "pod" | "books" | "workforce" | "sheets" | "pages" | "slides";
 
@@ -28,6 +34,18 @@ export interface AppMeta {
   Icon: ComponentType<SVGProps<SVGSVGElement>>;
   voiceTone: string;
   href: string;
+  /** Optional alternate logo treatments shown on the app page */
+  variants?: LogoVariant[];
+}
+
+export interface LogoVariant {
+  name: string;
+  description: string;
+  src: string;
+  /** Background swatch behind the logo in the preview tile */
+  background: string;
+  /** Whether the tile chrome should use dark text */
+  textDark?: boolean;
 }
 
 export const APPS: AppMeta[] = [
@@ -107,6 +125,48 @@ export const APPS: AppMeta[] = [
     voiceTone:
       "[PLACEHOLDER] Considered, articulate, generous. Pages writes the way you wish you wrote on your best day.",
     href: "/apps/pages",
+    variants: [
+      {
+        name: "Plain",
+        description: "The default flat logo on its native brand surface.",
+        src: pagesFlat,
+        background: "hsl(0 0% 100%)",
+        textDark: true,
+      },
+      {
+        name: "Isolated",
+        description: "Standalone document mark without the circular container — for tight spaces.",
+        src: pagesIsolated,
+        background: "hsl(0 0% 100%)",
+        textDark: true,
+      },
+      {
+        name: "Light color",
+        description: "Soft tint variant for marketing surfaces and pastel backgrounds.",
+        src: pagesLight,
+        background: "hsl(0 0% 100%)",
+        textDark: true,
+      },
+      {
+        name: "Glass",
+        description: "Translucent treatment for layered hero compositions and dark imagery.",
+        src: pagesGlass,
+        background: "linear-gradient(135deg, #2881F4 0%, #0B3F8A 100%)",
+      },
+      {
+        name: "Grayscale — black",
+        description: "Single-color black variant for print, embossing, or monochrome contexts.",
+        src: pagesGrayscaleBlack,
+        background: "hsl(0 0% 100%)",
+        textDark: true,
+      },
+      {
+        name: "Grayscale — white",
+        description: "Reversed monochrome for use on dark photography and brand color blocks.",
+        src: pagesGrayscaleWhite,
+        background: "hsl(222 24% 7%)",
+      },
+    ],
   },
   {
     key: "slides",
