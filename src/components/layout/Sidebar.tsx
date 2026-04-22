@@ -8,6 +8,7 @@ import {
   Accessibility,
   Download,
   X,
+  FileWarning,
 } from "lucide-react";
 
 interface SidebarProps {
@@ -82,6 +83,12 @@ export function Sidebar({ open, onClose }: SidebarProps) {
               to="/downloads"
               icon={<Download className="h-3.5 w-3.5" />}
               label="Downloads"
+              onNavigate={onClose}
+            />
+            <Item
+              to="/disclaimer"
+              icon={<FileWarning className="h-3.5 w-3.5" />}
+              label="Disclaimer"
               onNavigate={onClose}
             />
           </Section>
