@@ -145,6 +145,31 @@ export function AppPage({ app }: { app: AppMeta }) {
           />
         </Section>
 
+        {/* Logo variants */}
+        {app.variants && app.variants.length > 0 && (
+          <Section
+            title="Logo variants"
+            description={`Approved alternate treatments of the ${app.name} logo. Use the variant that best fits the surface — never recreate or modify these.`}
+          >
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+              {app.variants.map((v) => (
+                <div key={v.name} className="overflow-hidden rounded-xl border border-border bg-card">
+                  <div
+                    className="flex h-44 items-center justify-center"
+                    style={{ background: v.background }}
+                  >
+                    <img src={v.src} alt={`${app.name} logo — ${v.name}`} className="h-24 w-24" />
+                  </div>
+                  <div className="border-t border-border px-4 py-3">
+                    <p className="text-sm font-medium">{v.name}</p>
+                    <p className="mt-1 text-xs text-muted-foreground">{v.description}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </Section>
+        )}
+
         {/* Typography lockup */}
         <Section
           title="Name lockup"
