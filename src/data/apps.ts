@@ -28,6 +28,18 @@ export interface AppMeta {
   Icon: ComponentType<SVGProps<SVGSVGElement>>;
   voiceTone: string;
   href: string;
+  /** Optional alternate logo treatments shown on the app page */
+  variants?: LogoVariant[];
+}
+
+export interface LogoVariant {
+  name: string;
+  description: string;
+  src: string;
+  /** Background swatch behind the logo in the preview tile */
+  background: string;
+  /** Whether the tile chrome should use dark text */
+  textDark?: boolean;
 }
 
 export const APPS: AppMeta[] = [
