@@ -92,20 +92,24 @@ export const SheetsIcon = (props: IconProps) => (
 );
 
 export const PagesIcon = (props: IconProps) => (
-  <Squircle color="hsl(var(--pages))" {...props}>
+  <svg viewBox="0 0 110 110" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
     <path
-      d="M22 16h14l8 8v22a2 2 0 0 1-2 2H22a2 2 0 0 1-2-2V18a2 2 0 0 1 2-2z"
+      d="M0 55C0 9.7075 9.7075 0 55 0C100.292 0 110 9.7075 110 55C110 100.292 100.292 110 55 110C9.7075 110 0 100.292 0 55Z"
+      fill="#2881F4"
+    />
+    <path
+      d="M25 86.1176C25 89.9187 28.0813 93 31.8824 93H69.3529L87.7059 75.1176V42.3333L61.7059 17H31.8823C28.0813 17 25 20.0813 25 23.8824V86.1176Z"
       fill="white"
-      opacity="0.95"
     />
-    <path d="M36 16v8h8" stroke="hsl(var(--pages))" strokeWidth="2" fill="none" />
     <path
-      d="M26 32h12M26 37h12M26 42h8"
-      stroke="hsl(var(--pages))"
-      strokeWidth="2"
-      strokeLinecap="round"
+      d="M61.7061 17L87.7061 42.3333H68.5884C64.7874 42.3333 61.7061 39.331 61.7061 35.6274V17Z"
+      fill="#C3DCFC"
     />
-  </Squircle>
+    <path
+      d="M87.706 75.1177L69.353 93L69.353 81.8236C69.353 78.12 72.4344 75.1177 76.2354 75.1177L87.706 75.1177Z"
+      fill="#539AF6"
+    />
+  </svg>
 );
 
 export const SlidesIcon = (props: IconProps) => (
