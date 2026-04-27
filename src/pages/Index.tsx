@@ -13,8 +13,8 @@ const Index = () => {
     <>
       <PageHeader
         eyebrow="Gopaddi Suite"
-        title="One brand, six apps, every detail."
-        description="The single source of truth for how the Gopaddi suite looks, feels, and is used — for designers, developers, and marketers shipping in our name."
+        title="Work better, beautifully connected."
+        description="Gopaddi is a suite of focused apps and vertical solutions designed to feel like one product — so your team, your tools, and your customers stay in sync across every surface."
       >
         <div className="flex flex-wrap gap-3">
           <Link
