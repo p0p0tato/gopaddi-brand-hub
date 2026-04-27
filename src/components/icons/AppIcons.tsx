@@ -79,17 +79,35 @@ export const WorkforceIcon = (props: IconProps) => (
   </svg>
 );
 
-export const SheetsIcon = (props: IconProps) => (
-  <Squircle color="hsl(var(--sheets))" {...props}>
-    <rect x="16" y="16" width="32" height="32" rx="3" fill="white" opacity="0.95" />
-    <path
-      d="M16 26h32M16 36h32M26 16v32M36 16v32"
-      stroke="hsl(var(--sheets))"
-      strokeWidth="2"
+import sheetsLogo from "@/assets/apps/sheets.svg";
+import callConnectLogo from "@/assets/apps/callconnect.svg";
+import workspaceLogo from "@/assets/apps/workspace.svg";
+import travelOsLogo from "@/assets/solutions/travel-os.svg";
+import restaurantOsLogo from "@/assets/solutions/restaurant-os.svg";
+import nightlifeOsLogo from "@/assets/solutions/nightlife-os.svg";
+import eventsOsLogo from "@/assets/solutions/events-os.svg";
+
+const makeImgIcon = (src: string, alt: string) => {
+  const Comp = ({ className, style, ...rest }: IconProps) => (
+    <img
+      src={src}
+      alt={alt}
+      className={className}
+      style={style}
+      {...(rest as object)}
     />
-    <rect x="16" y="16" width="10" height="10" fill="hsl(var(--sheets))" opacity="0.25" />
-  </Squircle>
-);
+  );
+  Comp.displayName = `${alt}Icon`;
+  return Comp;
+};
+
+export const SheetsIcon = makeImgIcon(sheetsLogo, "Sheets");
+export const CallConnectIcon = makeImgIcon(callConnectLogo, "Call Connect");
+export const WorkspaceIcon = makeImgIcon(workspaceLogo, "Workspace");
+export const TravelOsIcon = makeImgIcon(travelOsLogo, "Travel OS");
+export const RestaurantOsIcon = makeImgIcon(restaurantOsLogo, "Restaurant OS");
+export const NightlifeOsIcon = makeImgIcon(nightlifeOsLogo, "Nightlife OS");
+export const EventsOsIcon = makeImgIcon(eventsOsLogo, "Events OS");
 
 export const PagesIcon = (props: IconProps) => (
   <svg viewBox="0 0 110 110" fill="none" xmlns="http://www.w3.org/2000/svg" {...props}>
