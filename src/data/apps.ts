@@ -272,11 +272,10 @@ export const APPS: AppMeta[] = [
     tagline: "Spreadsheets, reimagined.",
     description:
       "Sheets is a collaborative spreadsheet built for the speed of modern data work.",
-    primaryHex: "#F59E0B",
-    secondaryHex: "#92400E",
-    neutralHex: "#1C1410",
+    primaryHex: "#278C59",
+    secondaryHex: "#D4E8DE",
+    neutralHex: "#0B2018",
     token: "sheets",
-    placeholderColor: true,
     Icon: SheetsIcon,
     voiceTone:
       "[PLACEHOLDER] Sharp, capable, unfussy. Sheets gets out of your way and lets the numbers talk.",
@@ -396,9 +395,108 @@ export const APPS: AppMeta[] = [
       },
     ],
   },
+  {
+    key: "callconnect",
+    name: "Call Connect",
+    tagline: "Voice calls without the friction.",
+    description:
+      "Call Connect powers crystal-clear voice and contact sync across the Gopaddi suite.",
+    primaryHex: "#7D23F2",
+    secondaryHex: "#D6BFFB",
+    neutralHex: "#1A0A33",
+    token: "callconnect",
+    Icon: CallConnectIcon,
+    voiceTone:
+      "[PLACEHOLDER] Direct, warm, dependable. Call Connect speaks like the person you actually want on the line.",
+    href: "/apps/callconnect",
+    category: "app",
+  },
+  {
+    key: "workspace",
+    name: "Workspace",
+    tagline: "The home for everything Gopaddi.",
+    description:
+      "Workspace is the unified shell that ties every Gopaddi app, file, and person together.",
+    primaryHex: "#0D6EFD",
+    secondaryHex: "#85BAFF",
+    neutralHex: "#0A1A33",
+    token: "workspace",
+    Icon: WorkspaceIcon,
+    voiceTone:
+      "[PLACEHOLDER] Calm, structural, foundational. Workspace is the quiet host that makes everything else feel at home.",
+    href: "/apps/workspace",
+    category: "app",
+  },
+  {
+    key: "travel-os",
+    name: "Travel OS",
+    tagline: "Operations for travel businesses.",
+    description:
+      "Travel OS is Gopaddi's vertical solution for tour operators, agencies, and travel brands.",
+    primaryHex: "#4186F3",
+    secondaryHex: "#94BBF8",
+    neutralHex: "#0A1F45",
+    token: "travel-os",
+    Icon: TravelOsIcon,
+    voiceTone:
+      "[PLACEHOLDER] Confident, journey-led, expansive. Travel OS sounds like the operator who has seen it all.",
+    href: "/apps/travel-os",
+    category: "solution",
+  },
+  {
+    key: "restaurant-os",
+    name: "Restaurant OS",
+    tagline: "The back-of-house, reimagined.",
+    description:
+      "Restaurant OS unifies orders, inventory, and floor operations for modern hospitality teams.",
+    primaryHex: "#E65151",
+    secondaryHex: "#F6C0C0",
+    neutralHex: "#3A0A0A",
+    token: "restaurant-os",
+    Icon: RestaurantOsIcon,
+    voiceTone:
+      "[PLACEHOLDER] Hospitable, decisive, service-led. Restaurant OS speaks like a great GM on a Saturday night.",
+    href: "/apps/restaurant-os",
+    category: "solution",
+  },
+  {
+    key: "nightlife-os",
+    name: "Nightlife OS",
+    tagline: "Run the room, after dark.",
+    description:
+      "Nightlife OS handles guestlists, table service, and door flow for clubs and late-night venues.",
+    primaryHex: "#7A2BC1",
+    secondaryHex: "#CAAAE6",
+    neutralHex: "#1A0833",
+    token: "nightlife-os",
+    Icon: NightlifeOsIcon,
+    voiceTone:
+      "[PLACEHOLDER] Bold, atmospheric, after-hours. Nightlife OS sounds like the host who owns the night.",
+    href: "/apps/nightlife-os",
+    category: "solution",
+  },
+  {
+    key: "events-os",
+    name: "Events OS",
+    tagline: "Plan, ticket, run — end to end.",
+    description:
+      "Events OS powers ticketing, attendee flow, and on-site operations for live experiences.",
+    primaryHex: "#FA386C",
+    secondaryHex: "#FED7E2",
+    neutralHex: "#3A0A1F",
+    token: "events-os",
+    Icon: EventsOsIcon,
+    voiceTone:
+      "[PLACEHOLDER] Energetic, organized, showtime-ready. Events OS sounds like the producer who keeps the run-of-show humming.",
+    href: "/apps/events-os",
+    category: "solution",
+  },
 ];
 
 export const APP_MAP = APPS.reduce<Record<AppKey, AppMeta>>((acc, a) => {
   acc[a.key] = a;
   return acc;
 }, {} as Record<AppKey, AppMeta>);
+
+export const CORE_APPS = APPS.filter((a) => a.category !== "solution");
+export const SOLUTIONS = APPS.filter((a) => a.category === "solution");
