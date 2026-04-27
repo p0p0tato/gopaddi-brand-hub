@@ -6,6 +6,12 @@ import {
   SheetsIcon,
   PagesIcon,
   SlidesIcon,
+  CallConnectIcon,
+  WorkspaceIcon,
+  TravelOsIcon,
+  RestaurantOsIcon,
+  NightlifeOsIcon,
+  EventsOsIcon,
 } from "@/components/icons/AppIcons";
 import pagesFlat from "@/assets/pages/pages-flat.svg";
 import pagesGrayscaleBlack from "@/assets/pages/pages-grayscale-black.svg";
@@ -38,7 +44,21 @@ import booksGlass from "@/assets/books/books-glass.svg";
 import booksGrayscaleBlack from "@/assets/books/books-grayscale-black.svg";
 import booksGrayscaleWhite from "@/assets/books/books-grayscale-white.svg";
 
-export type AppKey = "pod" | "books" | "workforce" | "sheets" | "pages" | "slides";
+export type AppKey =
+  | "pod"
+  | "books"
+  | "workforce"
+  | "sheets"
+  | "pages"
+  | "slides"
+  | "callconnect"
+  | "workspace"
+  | "travel-os"
+  | "restaurant-os"
+  | "nightlife-os"
+  | "events-os";
+
+export type AppCategory = "app" | "solution";
 
 export interface AppMeta {
   key: AppKey;
@@ -58,6 +78,8 @@ export interface AppMeta {
   Icon: ComponentType<SVGProps<SVGSVGElement>>;
   voiceTone: string;
   href: string;
+  /** Whether this is a core app or a vertical solution */
+  category?: AppCategory;
   /** Optional alternate logo treatments shown on the app page */
   variants?: LogoVariant[];
 }
