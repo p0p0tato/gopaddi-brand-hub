@@ -1,5 +1,5 @@
 import { NavLink } from "@/components/NavLink";
-import { APPS } from "@/data/apps";
+import { CORE_APPS, SOLUTIONS } from "@/data/apps";
 import { cn } from "@/lib/utils";
 import {
   BookOpen,
@@ -54,7 +54,20 @@ export function Sidebar({ open, onClose }: SidebarProps) {
           </Section>
 
           <Section title="Apps">
-            {APPS.map((app) => (
+            {CORE_APPS.map((app) => (
+              <Item
+                key={app.key}
+                to={app.href}
+                label={app.name}
+                accent={app.token}
+                iconNode={<app.Icon className="h-5 w-5 rounded-[5px]" />}
+                onNavigate={onClose}
+              />
+            ))}
+          </Section>
+
+          <Section title="Solutions">
+            {SOLUTIONS.map((app) => (
               <Item
                 key={app.key}
                 to={app.href}
