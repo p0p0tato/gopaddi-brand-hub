@@ -48,12 +48,18 @@
     --app-foreground: 0 0% 100%;
 
     /* Per-app brand tokens */
-    --pod: 233 99% 65%;          /* #4D61FE Pod brand */
-    --books: 161 75% 37%;        /* #17A57D Books brand */
-    --workforce: 201 89% 64%;    /* #51BCF5 Workforce brand */
-    --sheets: 28 96% 54%;        /* placeholder amber */
-    --pages: 215 90% 56%;        /* #2881F4 Pages brand */
-    --slides: 32 100% 52%;       /* #FF920A Slides brand */
+    --pod: 233 99% 65%;            /* #4D61FE Pod brand */
+    --books: 161 75% 37%;          /* #17A57D Books brand */
+    --workforce: 201 89% 64%;      /* #51BCF5 Workforce brand */
+    --sheets: 150 56% 35%;         /* #278C59 Sheets brand */
+    --pages: 215 90% 56%;          /* #2881F4 Pages brand */
+    --slides: 32 100% 52%;         /* #FF920A Slides brand */
+    --callconnect: 269 89% 54%;    /* #7D23F2 Call Connect */
+    --workspace: 215 99% 52%;      /* #0D6EFD Workspace */
+    --travel-os: 216 88% 60%;      /* #4186F3 Travel OS */
+    --restaurant-os: 0 75% 61%;    /* #E65151 Restaurant OS */
+    --nightlife-os: 273 64% 47%;   /* #7A2BC1 Nightlife OS */
+    --events-os: 343 95% 60%;      /* #FA386C Events OS */
 
     /* Sidebar */
     --sidebar-background: 0 0% 99%;

@@ -63,6 +63,12 @@ export default {
         sheets: "hsl(var(--sheets))",
         pages: "hsl(var(--pages))",
         slides: "hsl(var(--slides))",
+        callconnect: "hsl(var(--callconnect))",
+        workspace: "hsl(var(--workspace))",
+        "travel-os": "hsl(var(--travel-os))",
+        "restaurant-os": "hsl(var(--restaurant-os))",
+        "nightlife-os": "hsl(var(--nightlife-os))",
+        "events-os": "hsl(var(--events-os))",
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
