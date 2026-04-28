@@ -283,17 +283,17 @@ export const APPS: AppMeta[] = [
   },
   {
     key: "pages",
-    name: "Pages",
+    name: "Docs",
     tagline: "Docs that think with you.",
     description:
-      "Pages is a flexible documents app that scales from a quick note to a full knowledge base.",
+      "Docs is a flexible documents app that scales from a quick note to a full knowledge base.",
     primaryHex: "#2881F4",
     secondaryHex: "#C3DCFC",
     neutralHex: "#0B2A5C",
     token: "pages",
     Icon: PagesIcon,
     voiceTone:
-      "[PLACEHOLDER] Considered, articulate, generous. Pages writes the way you wish you wrote on your best day.",
+      "[PLACEHOLDER] Considered, articulate, generous. Docs writes the way you wish you wrote on your best day.",
     href: "/apps/pages",
     variants: [
       {
