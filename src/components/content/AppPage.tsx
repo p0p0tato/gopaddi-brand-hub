@@ -394,3 +394,65 @@ function PlatformTile({
     </div>
   );
 }
+
+function DownloadButton({
+  onClick,
+  label,
+  ariaLabel,
+  compact,
+  busy,
+}: {
+  onClick: () => void;
+  label: string;
+  ariaLabel?: string;
+  compact?: boolean;
+  busy?: boolean;
+}) {
+  return (
+    <button
+      type="button"
+      onClick={onClick}
+      disabled={busy}
+      aria-label={ariaLabel ?? label}
+      className={
+        "inline-flex shrink-0 items-center gap-1.5 rounded-md border border-border bg-background font-medium text-foreground hover:bg-muted transition-colors disabled:opacity-60 disabled:cursor-not-allowed " +
+        (compact ? "px-2 py-1 text-[11px]" : "px-3 py-1.5 text-xs")
+      }
+    >
+      {busy ? (
+        <Loader2 className={compact ? "h-3 w-3 animate-spin" : "h-3.5 w-3.5 animate-spin"} />
+      ) : (
+        <Download className={compact ? "h-3 w-3" : "h-3.5 w-3.5"} />
+      )}
+      {label}
+    </button>
+  );
+}
+
+function DownloadAllButton({ app }: { app: AppMeta }) {
+  const [busy, setBusy] = useState(false);
+  const handleClick = async () => {
+    if (busy) return;
+    setBusy(true);
+    try {
+      const files: { name: string; url: string }[] = [];
+      if (app.logoSrc) {
+        files.push({ name: `${app.key}-logo.svg`, url: app.logoSrc });
+      }
+      (app.variants ?? []).forEach((v: LogoVariant) => {
+        files.push({ name: `${app.key}-${slugify(v.name)}.svg`, url: v.src });
+      });
+      await downloadZip(files, `${app.key}-logo-pack.zip`);
+    } finally {
+      setBusy(false);
+    }
+  };
+  return (
+    <DownloadButton
+      onClick={handleClick}
+      label={busy ? "Preparing…" : "Download all (.zip)"}
+      ariaLabel={`Download all ${app.name} logo variants as ZIP`}
+      busy={busy}
+    />
+  );
+}
