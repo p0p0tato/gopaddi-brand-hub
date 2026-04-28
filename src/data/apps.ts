@@ -43,6 +43,13 @@ import booksLight from "@/assets/books/books-light.svg";
 import booksGlass from "@/assets/books/books-glass.svg";
 import booksGrayscaleBlack from "@/assets/books/books-grayscale-black.svg";
 import booksGrayscaleWhite from "@/assets/books/books-grayscale-white.svg";
+import sheetsLogo from "@/assets/apps/sheets.svg";
+import callConnectLogo from "@/assets/apps/callconnect.svg";
+import workspaceLogo from "@/assets/apps/workspace.svg";
+import travelOsLogo from "@/assets/solutions/travel-os.svg";
+import restaurantOsLogo from "@/assets/solutions/restaurant-os.svg";
+import nightlifeOsLogo from "@/assets/solutions/nightlife-os.svg";
+import eventsOsLogo from "@/assets/solutions/events-os.svg";
 
 export type AppKey =
   | "pod"
@@ -80,6 +87,8 @@ export interface AppMeta {
   href: string;
   /** Whether this is a core app or a vertical solution */
   category?: AppCategory;
+  /** Downloadable main logo (SVG URL) */
+  logoSrc?: string;
   /** Optional alternate logo treatments shown on the app page */
   variants?: LogoVariant[];
 }
