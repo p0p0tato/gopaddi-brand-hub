@@ -1,10 +1,11 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { PageHeader, PageBody, Section, Placeholder } from "@/components/content/Page";
 import { ColorSwatch } from "@/components/content/ColorSwatch";
 import { DoDontGrid } from "@/components/content/DoDontGrid";
 import { AppAccentProvider } from "@/components/theme/AppAccentProvider";
-import type { AppMeta } from "@/data/apps";
-import { Smartphone, Monitor, Tablet, Laptop } from "lucide-react";
+import type { AppMeta, LogoVariant } from "@/data/apps";
+import { Smartphone, Monitor, Tablet, Laptop, Download, Loader2 } from "lucide-react";
+import { downloadFile, downloadZip, slugify } from "@/lib/download";
 
 export function AppPage({ app }: { app: AppMeta }) {
   useEffect(() => {
@@ -42,16 +43,24 @@ export function AppPage({ app }: { app: AppMeta }) {
           description={`The ${app.name} icon must remain crisp from 512px down to 16px. Use the master SVG below — never rasterize and re-upscale.`}
         >
           <div className="rounded-xl border border-border bg-card p-6">
-            <div className="flex flex-wrap items-end gap-8">
-              {sizes.map((size) => (
-                <div key={size} className="flex flex-col items-center gap-2">
-                  <Icon style={{ width: size > 128 ? 128 : size, height: size > 128 ? 128 : size }} className="rounded-2xl" />
-                  <span className="text-[11px] font-mono text-muted-foreground">{size}px</span>
-                </div>
-              ))}
+            <div className="flex flex-wrap items-start justify-between gap-4">
+              <div className="flex flex-wrap items-end gap-8">
+                {sizes.map((size) => (
+                  <div key={size} className="flex flex-col items-center gap-2">
+                    <Icon style={{ width: size > 128 ? 128 : size, height: size > 128 ? 128 : size }} className="rounded-2xl" />
+                    <span className="text-[11px] font-mono text-muted-foreground">{size}px</span>
+                  </div>
+                ))}
+              </div>
+              {app.logoSrc && (
+                <DownloadButton
+                  onClick={() => downloadFile(app.logoSrc!, `${app.key}-logo.svg`)}
+                  label="Download SVG"
+                />
+              )}
             </div>
             <p className="mt-6 text-xs text-muted-foreground">
-              Note: 512 and 256 sizes are displayed at 128px in this preview to fit the page; download the full-size assets from the Downloads page.
+              Note: 512 and 256 sizes are displayed at 128px in this preview to fit the page. The downloaded master SVG scales cleanly to any size.
             </p>
           </div>
         </Section>
@@ -150,6 +159,7 @@ export function AppPage({ app }: { app: AppMeta }) {
           <Section
             title="Logo variants"
             description={`Approved alternate treatments of the ${app.name} logo. Use the variant that best fits the surface — never recreate or modify these.`}
+            action={<DownloadAllButton app={app} />}
           >
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
               {app.variants.map((v) => (
@@ -160,9 +170,19 @@ export function AppPage({ app }: { app: AppMeta }) {
                   >
                     <img src={v.src} alt={`${app.name} logo — ${v.name}`} className="h-24 w-24" />
                   </div>
-                  <div className="border-t border-border px-4 py-3">
-                    <p className="text-sm font-medium">{v.name}</p>
-                    <p className="mt-1 text-xs text-muted-foreground">{v.description}</p>
+                  <div className="flex items-start justify-between gap-3 border-t border-border px-4 py-3">
+                    <div className="min-w-0">
+                      <p className="text-sm font-medium">{v.name}</p>
+                      <p className="mt-1 text-xs text-muted-foreground">{v.description}</p>
+                    </div>
+                    <DownloadButton
+                      compact
+                      onClick={() =>
+                        downloadFile(v.src, `${app.key}-${slugify(v.name)}.svg`)
+                      }
+                      label="SVG"
+                      ariaLabel={`Download ${app.name} ${v.name} SVG`}
+                    />
                   </div>
                 </div>
               ))}
@@ -372,5 +392,67 @@ function PlatformTile({
       <app.Icon className="h-12 w-12 rounded-xl mb-3" />
       <p className="text-[11px] text-muted-foreground">{detail}</p>
     </div>
+  );
+}
+
+function DownloadButton({
+  onClick,
+  label,
+  ariaLabel,
+  compact,
+  busy,
+}: {
+  onClick: () => void;
+  label: string;
+  ariaLabel?: string;
+  compact?: boolean;
+  busy?: boolean;
+}) {
+  return (
+    <button
+      type="button"
+      onClick={onClick}
+      disabled={busy}
+      aria-label={ariaLabel ?? label}
+      className={
+        "inline-flex shrink-0 items-center gap-1.5 rounded-md border border-border bg-background font-medium text-foreground hover:bg-muted transition-colors disabled:opacity-60 disabled:cursor-not-allowed " +
+        (compact ? "px-2 py-1 text-[11px]" : "px-3 py-1.5 text-xs")
+      }
+    >
+      {busy ? (
+        <Loader2 className={compact ? "h-3 w-3 animate-spin" : "h-3.5 w-3.5 animate-spin"} />
+      ) : (
+        <Download className={compact ? "h-3 w-3" : "h-3.5 w-3.5"} />
+      )}
+      {label}
+    </button>
+  );
+}
+
+function DownloadAllButton({ app }: { app: AppMeta }) {
+  const [busy, setBusy] = useState(false);
+  const handleClick = async () => {
+    if (busy) return;
+    setBusy(true);
+    try {
+      const files: { name: string; url: string }[] = [];
+      if (app.logoSrc) {
+        files.push({ name: `${app.key}-logo.svg`, url: app.logoSrc });
+      }
+      (app.variants ?? []).forEach((v: LogoVariant) => {
+        files.push({ name: `${app.key}-${slugify(v.name)}.svg`, url: v.src });
+      });
+      await downloadZip(files, `${app.key}-logo-pack.zip`);
+    } finally {
+      setBusy(false);
+    }
+  };
+  return (
+    <DownloadButton
+      onClick={handleClick}
+      label={busy ? "Preparing…" : "Download all (.zip)"}
+      ariaLabel={`Download all ${app.name} logo variants as ZIP`}
+      busy={busy}
+    />
   );
 }
