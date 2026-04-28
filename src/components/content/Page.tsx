@@ -54,20 +54,25 @@ export function Section({
   id,
   title,
   description,
+  action,
   children,
 }: {
   id?: string;
   title: string;
   description?: string;
+  action?: ReactNode;
   children: ReactNode;
 }) {
   return (
     <section id={id} className="scroll-mt-24 py-8 first:pt-0">
-      <div className="mb-6">
-        <h2 className="text-xl md:text-2xl font-semibold tracking-tight">{title}</h2>
-        {description && (
-          <p className="mt-2 text-sm text-muted-foreground max-w-2xl">{description}</p>
-        )}
+      <div className="mb-6 flex items-start justify-between gap-4">
+        <div className="min-w-0">
+          <h2 className="text-xl md:text-2xl font-semibold tracking-tight">{title}</h2>
+          {description && (
+            <p className="mt-2 text-sm text-muted-foreground max-w-2xl">{description}</p>
+          )}
+        </div>
+        {action && <div className="shrink-0">{action}</div>}
       </div>
       {children}
     </section>
