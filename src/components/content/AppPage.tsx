@@ -1,10 +1,11 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { PageHeader, PageBody, Section, Placeholder } from "@/components/content/Page";
 import { ColorSwatch } from "@/components/content/ColorSwatch";
 import { DoDontGrid } from "@/components/content/DoDontGrid";
 import { AppAccentProvider } from "@/components/theme/AppAccentProvider";
-import type { AppMeta } from "@/data/apps";
-import { Smartphone, Monitor, Tablet, Laptop } from "lucide-react";
+import type { AppMeta, LogoVariant } from "@/data/apps";
+import { Smartphone, Monitor, Tablet, Laptop, Download, Loader2 } from "lucide-react";
+import { downloadFile, downloadZip, slugify } from "@/lib/download";
 
 export function AppPage({ app }: { app: AppMeta }) {
   useEffect(() => {
