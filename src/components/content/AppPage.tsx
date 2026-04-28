@@ -159,6 +159,7 @@ export function AppPage({ app }: { app: AppMeta }) {
           <Section
             title="Logo variants"
             description={`Approved alternate treatments of the ${app.name} logo. Use the variant that best fits the surface — never recreate or modify these.`}
+            action={<DownloadAllButton app={app} />}
           >
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
               {app.variants.map((v) => (
@@ -169,9 +170,19 @@ export function AppPage({ app }: { app: AppMeta }) {
                   >
                     <img src={v.src} alt={`${app.name} logo — ${v.name}`} className="h-24 w-24" />
                   </div>
-                  <div className="border-t border-border px-4 py-3">
-                    <p className="text-sm font-medium">{v.name}</p>
-                    <p className="mt-1 text-xs text-muted-foreground">{v.description}</p>
+                  <div className="flex items-start justify-between gap-3 border-t border-border px-4 py-3">
+                    <div className="min-w-0">
+                      <p className="text-sm font-medium">{v.name}</p>
+                      <p className="mt-1 text-xs text-muted-foreground">{v.description}</p>
+                    </div>
+                    <DownloadButton
+                      compact
+                      onClick={() =>
+                        downloadFile(v.src, `${app.key}-${slugify(v.name)}.svg`)
+                      }
+                      label="SVG"
+                      ariaLabel={`Download ${app.name} ${v.name} SVG`}
+                    />
                   </div>
                 </div>
               ))}
