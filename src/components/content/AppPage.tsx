@@ -43,16 +43,24 @@ export function AppPage({ app }: { app: AppMeta }) {
           description={`The ${app.name} icon must remain crisp from 512px down to 16px. Use the master SVG below — never rasterize and re-upscale.`}
         >
           <div className="rounded-xl border border-border bg-card p-6">
-            <div className="flex flex-wrap items-end gap-8">
-              {sizes.map((size) => (
-                <div key={size} className="flex flex-col items-center gap-2">
-                  <Icon style={{ width: size > 128 ? 128 : size, height: size > 128 ? 128 : size }} className="rounded-2xl" />
-                  <span className="text-[11px] font-mono text-muted-foreground">{size}px</span>
-                </div>
-              ))}
+            <div className="flex flex-wrap items-start justify-between gap-4">
+              <div className="flex flex-wrap items-end gap-8">
+                {sizes.map((size) => (
+                  <div key={size} className="flex flex-col items-center gap-2">
+                    <Icon style={{ width: size > 128 ? 128 : size, height: size > 128 ? 128 : size }} className="rounded-2xl" />
+                    <span className="text-[11px] font-mono text-muted-foreground">{size}px</span>
+                  </div>
+                ))}
+              </div>
+              {app.logoSrc && (
+                <DownloadButton
+                  onClick={() => downloadFile(app.logoSrc!, `${app.key}-logo.svg`)}
+                  label="Download SVG"
+                />
+              )}
             </div>
             <p className="mt-6 text-xs text-muted-foreground">
-              Note: 512 and 256 sizes are displayed at 128px in this preview to fit the page; download the full-size assets from the Downloads page.
+              Note: 512 and 256 sizes are displayed at 128px in this preview to fit the page. The downloaded master SVG scales cleanly to any size.
             </p>
           </div>
         </Section>
