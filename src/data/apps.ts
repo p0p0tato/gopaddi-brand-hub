@@ -118,6 +118,7 @@ export const APPS: AppMeta[] = [
     voiceTone:
       "[PLACEHOLDER] Friendly, energetic, never noisy. Pod's voice is the helpful colleague who keeps conversations on track.",
     href: "/apps/pod",
+    logoSrc: podFlat,
     variants: [
       {
         name: "Plain",
@@ -175,6 +176,7 @@ export const APPS: AppMeta[] = [
     voiceTone:
       "[PLACEHOLDER] Trustworthy, precise, reassuring. Books speaks with the quiet confidence of a great accountant.",
     href: "/apps/books",
+    logoSrc: booksFlat,
     variants: [
       {
         name: "Plain",
@@ -232,6 +234,7 @@ export const APPS: AppMeta[] = [
     voiceTone:
       "[PLACEHOLDER] Human, structured, empathetic. Workforce sounds like the HR partner everyone wishes they had.",
     href: "/apps/workforce",
+    logoSrc: workforceFlat,
     variants: [
       {
         name: "Plain",
@@ -289,6 +292,7 @@ export const APPS: AppMeta[] = [
     voiceTone:
       "[PLACEHOLDER] Sharp, capable, unfussy. Sheets gets out of your way and lets the numbers talk.",
     href: "/apps/sheets",
+    logoSrc: sheetsLogo,
   },
   {
     key: "pages",
@@ -304,6 +308,7 @@ export const APPS: AppMeta[] = [
     voiceTone:
       "[PLACEHOLDER] Considered, articulate, generous. Docs writes the way you wish you wrote on your best day.",
     href: "/apps/pages",
+    logoSrc: pagesFlat,
     variants: [
       {
         name: "Plain",
@@ -361,6 +366,7 @@ export const APPS: AppMeta[] = [
     voiceTone:
       "[PLACEHOLDER] Bold, expressive, decisive. Slides is the creative director in the room.",
     href: "/apps/slides",
+    logoSrc: slidesFlat,
     variants: [
       {
         name: "Plain",
@@ -418,6 +424,7 @@ export const APPS: AppMeta[] = [
     voiceTone:
       "[PLACEHOLDER] Direct, warm, dependable. Call Connect speaks like the person you actually want on the line.",
     href: "/apps/callconnect",
+    logoSrc: callConnectLogo,
     category: "app",
   },
   {
@@ -434,6 +441,7 @@ export const APPS: AppMeta[] = [
     voiceTone:
       "[PLACEHOLDER] Calm, structural, foundational. Workspace is the quiet host that makes everything else feel at home.",
     href: "/apps/workspace",
+    logoSrc: workspaceLogo,
     category: "app",
   },
   {
@@ -450,6 +458,7 @@ export const APPS: AppMeta[] = [
     voiceTone:
       "[PLACEHOLDER] Confident, journey-led, expansive. Travel OS sounds like the operator who has seen it all.",
     href: "/apps/travel-os",
+    logoSrc: travelOsLogo,
     category: "solution",
   },
   {
@@ -466,6 +475,7 @@ export const APPS: AppMeta[] = [
     voiceTone:
       "[PLACEHOLDER] Hospitable, decisive, service-led. Restaurant OS speaks like a great GM on a Saturday night.",
     href: "/apps/restaurant-os",
+    logoSrc: restaurantOsLogo,
     category: "solution",
   },
   {
@@ -482,6 +492,7 @@ export const APPS: AppMeta[] = [
     voiceTone:
       "[PLACEHOLDER] Bold, atmospheric, after-hours. Nightlife OS sounds like the host who owns the night.",
     href: "/apps/nightlife-os",
+    logoSrc: nightlifeOsLogo,
     category: "solution",
   },
   {
@@ -498,6 +509,7 @@ export const APPS: AppMeta[] = [
     voiceTone:
       "[PLACEHOLDER] Energetic, organized, showtime-ready. Events OS sounds like the producer who keeps the run-of-show humming.",
     href: "/apps/events-os",
+    logoSrc: eventsOsLogo,
     category: "solution",
   },
 ];
