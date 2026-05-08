@@ -261,7 +261,7 @@ export const APPS: AppMeta[] = [
         name: "Glass",
         description: "Translucent treatment for layered hero compositions and dark imagery.",
         src: workforceGlass,
-        background: "linear-gradient(135deg, #0D6EFD 0%, #0A1A33 100%)",
+        background: "linear-gradient(135deg, #40B7FC 0%, #0E5A82 100%)",
       },
       {
         name: "Grayscale — black",
