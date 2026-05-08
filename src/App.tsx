@@ -14,6 +14,7 @@ import Components from "./pages/Components.tsx";
 import Accessibility from "./pages/Accessibility.tsx";
 import Downloads from "./pages/Downloads.tsx";
 import Disclaimer from "./pages/Disclaimer.tsx";
+import Colors from "./pages/Colors.tsx";
 
 const queryClient = new QueryClient();
 
@@ -29,6 +30,7 @@ const App = () => (
               <Routes>
                 <Route path="/" element={<Index />} />
                 <Route path="/foundations" element={<Foundations />} />
+                <Route path="/colors" element={<Colors />} />
                 <Route path="/apps/:slug" element={<AppRoute />} />
                 <Route path="/components" element={<Components />} />
                 <Route path="/accessibility" element={<Accessibility />} />

@@ -9,6 +9,7 @@ import {
   Download,
   X,
   FileWarning,
+  Palette,
 } from "lucide-react";
 
 interface SidebarProps {
@@ -49,6 +50,12 @@ export function Sidebar({ open, onClose }: SidebarProps) {
               to="/foundations"
               icon={<BookOpen className="h-3.5 w-3.5" />}
               label="Brand Foundations"
+              onNavigate={onClose}
+            />
+            <Item
+              to="/colors"
+              icon={<Palette className="h-3.5 w-3.5" />}
+              label="Colors"
               onNavigate={onClose}
             />
           </Section>
