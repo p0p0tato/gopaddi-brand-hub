@@ -110,8 +110,8 @@ export const APPS: AppMeta[] = [
     tagline: "Team messaging, threaded.",
     description:
       "Pod brings synchronous and async conversations into one focused workspace for product teams.",
-    primaryHex: "#4D61FE",
-    secondaryHex: "#AEB7FF",
+    primaryHex: "#8A50FD",
+    secondaryHex: "#D1B2FF",
     neutralHex: "#0F172A",
     token: "pod",
     Icon: PodIcon,
@@ -145,7 +145,7 @@ export const APPS: AppMeta[] = [
         name: "Glass",
         description: "Translucent treatment for layered hero compositions and dark imagery.",
         src: podGlass,
-        background: "linear-gradient(135deg, #4D61FE 0%, #1A2580 100%)",
+        background: "linear-gradient(135deg, #8A50FD 0%, #3E0F8C 100%)",
       },
       {
         name: "Grayscale — black",
@@ -168,8 +168,8 @@ export const APPS: AppMeta[] = [
     tagline: "Finance for modern teams.",
     description:
       "Books turns bookkeeping into a calm, structured experience — built for operators, not accountants.",
-    primaryHex: "#17A57D",
-    secondaryHex: "#A6E0D0",
+    primaryHex: "#259393",
+    secondaryHex: "#99D7D7",
     neutralHex: "#0B1F19",
     token: "books",
     Icon: BooksIcon,
@@ -203,7 +203,7 @@ export const APPS: AppMeta[] = [
         name: "Glass",
         description: "Translucent treatment for layered hero compositions and dark imagery.",
         src: booksGlass,
-        background: "linear-gradient(135deg, #17A57D 0%, #08402F 100%)",
+        background: "linear-gradient(135deg, #259393 0%, #0D3F3F 100%)",
       },
       {
         name: "Grayscale — black",
@@ -226,8 +226,8 @@ export const APPS: AppMeta[] = [
     tagline: "People operations, simplified.",
     description:
       "Workforce centralizes hiring, onboarding, and HR workflows in a single source of truth.",
-    primaryHex: "#51BCF5",
-    secondaryHex: "#B7E3FB",
+    primaryHex: "#0D6EFD",
+    secondaryHex: "#85BAFF",
     neutralHex: "#0F172A",
     token: "workforce",
     Icon: WorkforceIcon,
@@ -261,7 +261,7 @@ export const APPS: AppMeta[] = [
         name: "Glass",
         description: "Translucent treatment for layered hero compositions and dark imagery.",
         src: workforceGlass,
-        background: "linear-gradient(135deg, #51BCF5 0%, #0A6DA3 100%)",
+        background: "linear-gradient(135deg, #0D6EFD 0%, #0A1A33 100%)",
       },
       {
         name: "Grayscale — black",
@@ -284,8 +284,8 @@ export const APPS: AppMeta[] = [
     tagline: "Spreadsheets, reimagined.",
     description:
       "Sheets is a collaborative spreadsheet built for the speed of modern data work.",
-    primaryHex: "#278C59",
-    secondaryHex: "#D4E8DE",
+    primaryHex: "#259393",
+    secondaryHex: "#95DADA",
     neutralHex: "#0B2018",
     token: "sheets",
     Icon: SheetsIcon,
@@ -300,8 +300,8 @@ export const APPS: AppMeta[] = [
     tagline: "Docs that think with you.",
     description:
       "Docs is a flexible documents app that scales from a quick note to a full knowledge base.",
-    primaryHex: "#2881F4",
-    secondaryHex: "#C3DCFC",
+    primaryHex: "#259393",
+    secondaryHex: "#95DADA",
     neutralHex: "#0B2A5C",
     token: "pages",
     Icon: PagesIcon,
@@ -335,7 +335,7 @@ export const APPS: AppMeta[] = [
         name: "Glass",
         description: "Translucent treatment for layered hero compositions and dark imagery.",
         src: pagesGlass,
-        background: "linear-gradient(135deg, #2881F4 0%, #0B3F8A 100%)",
+        background: "linear-gradient(135deg, #259393 0%, #0D3F3F 100%)",
       },
       {
         name: "Grayscale — black",
@@ -358,8 +358,8 @@ export const APPS: AppMeta[] = [
     tagline: "Presentations with taste.",
     description:
       "Slides helps teams craft beautiful, opinionated presentations without fighting the editor.",
-    primaryHex: "#FF920A",
-    secondaryHex: "#FFCD8F",
+    primaryHex: "#259393",
+    secondaryHex: "#95DADA",
     neutralHex: "#1A1006",
     token: "slides",
     Icon: SlidesIcon,
@@ -393,7 +393,7 @@ export const APPS: AppMeta[] = [
         name: "Glass",
         description: "Translucent treatment for layered hero compositions and dark imagery.",
         src: slidesGlass,
-        background: "linear-gradient(135deg, #FF920A 0%, #8A4A00 100%)",
+        background: "linear-gradient(135deg, #259393 0%, #0D3F3F 100%)",
       },
       {
         name: "Grayscale — black",
@@ -416,8 +416,8 @@ export const APPS: AppMeta[] = [
     tagline: "Voice calls without the friction.",
     description:
       "Call Connect powers crystal-clear voice and contact sync across the Gopaddi suite.",
-    primaryHex: "#7D23F2",
-    secondaryHex: "#D6BFFB",
+    primaryHex: "#8A50FD",
+    secondaryHex: "#D1B2FF",
     neutralHex: "#1A0A33",
     token: "callconnect",
     Icon: CallConnectIcon,
@@ -450,8 +450,8 @@ export const APPS: AppMeta[] = [
     tagline: "Operations for travel businesses.",
     description:
       "Travel OS is Gopaddi's vertical solution for tour operators, agencies, and travel brands.",
-    primaryHex: "#4186F3",
-    secondaryHex: "#94BBF8",
+    primaryHex: "#0D6EFD",
+    secondaryHex: "#85BAFF",
     neutralHex: "#0A1F45",
     token: "travel-os",
     Icon: TravelOsIcon,
