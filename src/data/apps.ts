@@ -467,9 +467,9 @@ export const APPS: AppMeta[] = [
     tagline: "The back-of-house, reimagined.",
     description:
       "Restaurant OS unifies orders, inventory, and floor operations for modern hospitality teams.",
-    primaryHex: "#E65151",
-    secondaryHex: "#F6C0C0",
-    neutralHex: "#3A0A0A",
+    primaryHex: "#0D6EFD",
+    secondaryHex: "#85BAFF",
+    neutralHex: "#0A1A33",
     token: "restaurant-os",
     Icon: RestaurantOsIcon,
     voiceTone:
@@ -484,9 +484,9 @@ export const APPS: AppMeta[] = [
     tagline: "Run the room, after dark.",
     description:
       "Nightlife OS handles guestlists, table service, and door flow for clubs and late-night venues.",
-    primaryHex: "#7A2BC1",
-    secondaryHex: "#CAAAE6",
-    neutralHex: "#1A0833",
+    primaryHex: "#0D6EFD",
+    secondaryHex: "#85BAFF",
+    neutralHex: "#0A1A33",
     token: "nightlife-os",
     Icon: NightlifeOsIcon,
     voiceTone:
@@ -501,9 +501,9 @@ export const APPS: AppMeta[] = [
     tagline: "Plan, ticket, run — end to end.",
     description:
       "Events OS powers ticketing, attendee flow, and on-site operations for live experiences.",
-    primaryHex: "#FA386C",
-    secondaryHex: "#FED7E2",
-    neutralHex: "#3A0A1F",
+    primaryHex: "#0D6EFD",
+    secondaryHex: "#85BAFF",
+    neutralHex: "#0A1A33",
     token: "events-os",
     Icon: EventsOsIcon,
     voiceTone:
