@@ -44,22 +44,22 @@
     --code-bg: 220 14% 96%;
 
     /* Suite app accent colors (default = current app context) */
-    --app: 230 92% 64%;
+    --app: 215 99% 52%;
     --app-foreground: 0 0% 100%;
 
-    /* Per-app brand tokens */
-    --pod: 233 99% 65%;            /* #4D61FE Pod brand */
-    --books: 161 75% 37%;          /* #17A57D Books brand */
-    --workforce: 201 89% 64%;      /* #51BCF5 Workforce brand */
-    --sheets: 150 56% 35%;         /* #278C59 Sheets brand */
-    --pages: 215 90% 56%;          /* #2881F4 Pages brand */
-    --slides: 32 100% 52%;         /* #FF920A Slides brand */
-    --callconnect: 269 89% 54%;    /* #7D23F2 Call Connect */
+    /* Per-app brand tokens — Gopaddi brand blue #0D6EFD, teal #259393, purple #8A50FD */
+    --pod: 263 98% 65%;            /* #8A50FD Pod brand */
+    --books: 180 60% 36%;          /* #259393 Books brand */
+    --workforce: 215 99% 52%;      /* #0D6EFD Workforce brand */
+    --sheets: 180 60% 36%;         /* #259393 Sheets brand */
+    --pages: 180 60% 36%;          /* #259393 Docs brand */
+    --slides: 180 60% 36%;         /* #259393 Slides brand */
+    --callconnect: 263 98% 65%;    /* #8A50FD Call Connect */
     --workspace: 215 99% 52%;      /* #0D6EFD Workspace */
-    --travel-os: 216 88% 60%;      /* #4186F3 Travel OS */
-    --restaurant-os: 0 75% 61%;    /* #E65151 Restaurant OS */
-    --nightlife-os: 273 64% 47%;   /* #7A2BC1 Nightlife OS */
-    --events-os: 343 95% 60%;      /* #FA386C Events OS */
+    --travel-os: 215 99% 52%;      /* #0D6EFD Travel OS */
+    --restaurant-os: 215 99% 52%;  /* #0D6EFD Restaurant OS */
+    --nightlife-os: 215 99% 52%;   /* #0D6EFD Nightlife OS */
+    --events-os: 215 99% 52%;      /* #0D6EFD Events OS */
 
     /* Sidebar */
     --sidebar-background: 0 0% 99%;
